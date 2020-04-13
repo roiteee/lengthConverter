@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/LengthConverter.gd" type="Script" id=2]
+
+[node name="LengthConverter" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 23.0
+margin_right = 538.0
+margin_bottom = -26.0
+
+[node name="Heading" type="Label" parent="Panel"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 155.301
+margin_bottom = 30.6785
+text = "Convert Length"
+
+[node name="Length 1" type="Label" parent="Panel"]
+margin_left = 20.0
+margin_top = 51.0
+margin_right = 92.0
+margin_bottom = 69.0
+text = "Length 1"
+
+[node name="Length 2" type="Label" parent="Panel"]
+margin_left = 20.0
+margin_top = 163.815
+margin_right = 92.0
+margin_bottom = 181.815
+text = "Length 2"
+
+[node name="OptionButton1" type="OptionButton" parent="Panel"]
+margin_left = 89.0
+margin_top = 44.0
+margin_right = 211.0
+margin_bottom = 75.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton2" type="OptionButton" parent="Panel"]
+margin_left = 89.0
+margin_top = 156.815
+margin_right = 211.0
+margin_bottom = 187.815
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit 1" type="LineEdit" parent="Panel"]
+margin_left = 25.0
+margin_top = 93.0
+margin_right = 205.0
+margin_bottom = 123.0
+align = 2
+clear_button_enabled = true
+placeholder_text = "Length 1"
+
+[node name="LineEdit 2" type="LineEdit" parent="Panel"]
+margin_left = 25.0
+margin_top = 203.294
+margin_right = 205.0
+margin_bottom = 233.294
+align = 2
+placeholder_text = "Length 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_changed" from="Panel/LineEdit 1" to="." method="_on_LineEdit_1_text_changed"]
